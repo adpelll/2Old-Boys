@@ -1,0 +1,76 @@
+:root{--malam:#1f2a5a;--dalam:#141b3d;--krem:#fbf3e4;--kuning:#e9a23b;--jambu:#ff8fb1;--sage:#8fc7a6;--langit:#8ab8e8;--lila:#b9a4e6;--disp:"Fraunces",Georgia,serif;--body:"Nunito",system-ui,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--malam);color:var(--krem);font:500 1.05rem/1.65 var(--body);padding-bottom:5rem}
+.hero{position:relative;text-align:center;padding:2.5rem 1.25rem 1rem;overflow:hidden}
+.disc{position:absolute;left:50%;top:1.2rem;width:min(92vw,430px);aspect-ratio:1;margin-left:calc(min(92vw,430px) / -2);border-radius:50%;background:radial-gradient(circle,var(--jambu) 0 15%,var(--dalam) 15% 17%,transparent 17%),repeating-radial-gradient(circle,#0c1130 0 3px,#182052 3px 6px);animation:putar 16s linear infinite;box-shadow:0 0 0 8px rgba(255,255,255,.07)}
+@keyframes putar{to{transform:rotate(360deg)}
+}
+.duo{position:relative;width:min(80vw,380px);margin:0 auto;display:block;filter:drop-shadow(0 8px 14px rgba(0,0,0,.35))}
+.hero h1{position:relative;font:600 clamp(3.4rem,16vw,6.5rem)/1 var(--disp);margin:1rem 0 .4rem;letter-spacing:-.02em}
+.hero p{position:relative;max-width:30ch;margin:0 auto;font-size:1.15rem}
+main{max-width:640px;margin:0 auto;padding:1.5rem 1.1rem}
+.lagu{background:var(--krem);color:var(--malam);border-radius:26px;padding:1.4rem 1.3rem 1.5rem;margin-bottom:1.2rem;scroll-margin-top:1rem}
+.no{width:3.1rem;height:3.1rem;border-radius:50%;display:grid;place-items:center;font:600 1.4rem var(--disp);color:var(--malam);background:var(--c);box-shadow:inset 0 0 0 5px rgba(255,255,255,.35);margin-bottom:.8rem}
+.lagu:nth-child(1){--c:var(--jambu)}
+.lagu:nth-child(2){--c:var(--kuning)}
+.lagu:nth-child(3){--c:var(--sage)}
+.lagu:nth-child(4){--c:var(--langit)}
+.lagu:nth-child(5){--c:var(--lila)}
+.lagu:nth-child(6){--c:var(--jambu)}
+.lagu:nth-child(7){--c:var(--kuning)}
+.lagu:nth-child(8){--c:var(--sage)}
+.lagu:nth-child(9){--c:var(--langit)}
+.lagu:nth-child(10){--c:var(--lila)}
+.lagu:nth-child(11){--c:var(--jambu)}
+.lagu:nth-child(12){--c:var(--kuning)}
+.lagu:nth-child(13){--c:var(--sage)}
+.lagu:nth-child(14){--c:var(--langit)}
+.lagu:nth-child(15){--c:var(--lila)}
+.lagu:nth-child(16){--c:var(--jambu)}
+.lagu:nth-child(17){--c:var(--kuning)}
+.lagu:nth-child(18){--c:var(--sage)}
+.lagu:nth-child(19){--c:var(--langit)}
+.lagu:nth-child(20){--c:var(--lila)}
+.lagu h2{font:600 1.65rem/1.15 var(--disp);margin:0}
+.art{margin:.2rem 0 .9rem;font:italic 500 1.1rem var(--disp);opacity:.75}
+.lagu p:not(.art){margin:0 0 1rem}
+.cari{display:inline-block;color:var(--malam);font-weight:800;text-decoration:none;border-bottom:3px solid var(--c)}
+.cari:focus-visible,.buka:focus-visible,.besar:focus-visible{outline:3px solid var(--kuning);outline-offset:3px}
+.formal{width:min(70%,260px);margin:0 auto 1rem;display:block}
+.akhir{text-align:center;padding:2.5rem 1.25rem 1rem}
+.akhir h2{font:600 clamp(2rem,9vw,3.2rem)/1.1 var(--disp);margin:0 0 .6rem}
+.akhir p{max-width:34ch;margin:0 auto 1.4rem}
+.besar{display:inline-block;background:var(--jambu);color:var(--dalam);font:800 1.15rem var(--body);padding:.85rem 1.8rem;border-radius:999px;text-decoration:none}
+.player{position:fixed;left:0;right:0;bottom:0;z-index:5;display:flex;align-items:center;gap:.8rem;background:var(--dalam);padding:.7rem 1rem calc(.7rem + env(safe-area-inset-bottom,0px));border-top:2px solid rgba(255,255,255,.12)}
+.mini{flex:none;width:2.2rem;height:2.2rem;border-radius:50%;background:radial-gradient(circle,var(--jambu) 0 22%,transparent 22%),repeating-radial-gradient(circle,#0c1130 0 2px,#243070 2px 4px);animation:putar 3s linear infinite}
+#now{flex:1;min-width:0;font-size:.95rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.buka{flex:none;color:var(--dalam);background:var(--kuning);font-weight:800;text-decoration:none;padding:.4rem 1rem;border-radius:999px}
+@media(prefers-reduced-motion:reduce){.disc,.mini{animation:none}
+html{scroll-behavior:auto}
+}
+.galat{background:var(--krem);color:var(--malam);padding:1rem;border-radius:16px}
+.fav{font:italic 500 1.05rem/1.5 var(--disp);opacity:.85}
+
+/* Favorit: hati di kartu dan filter */
+.lagu{position:relative}
+.hati{position:absolute;top:.9rem;right:.9rem;width:2.9rem;height:2.9rem;border-radius:50%;border:0;padding:0;background:rgba(31,42,90,.08);color:var(--malam);display:grid;place-items:center;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.hati svg{width:1.5rem;height:1.5rem;fill:none;stroke:currentColor;stroke-width:2;stroke-linejoin:round}
+.hati[aria-pressed="true"]{color:#e0457b;background:rgba(224,69,123,.14)}
+.hati[aria-pressed="true"] svg{fill:currentColor;animation:denyut .35s ease}
+@keyframes denyut{0%{transform:scale(1)}40%{transform:scale(1.35)}100%{transform:scale(1)}}
+.saring{max-width:640px;margin:0 auto;padding:.4rem 1.1rem 0;display:flex;flex-wrap:wrap;gap:.6rem}
+.saring button{font:800 1rem var(--body);padding:.6rem 1.15rem;border-radius:999px;border:2px solid var(--krem);background:transparent;color:var(--krem);cursor:pointer}
+.saring button[aria-pressed="true"]{background:var(--krem);color:var(--malam)}
+.kosong{max-width:640px;margin:1rem auto 0;padding:0 1.1rem;opacity:.85}
+.lagu[hidden]{display:none}
+.hati:focus-visible,.saring button:focus-visible{outline:3px solid var(--kuning);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.hati[aria-pressed="true"] svg{animation:none}}
+
+/* Tombol kembali ke atas */
+.atas{position:fixed;right:1rem;bottom:calc(4.9rem + env(safe-area-inset-bottom,0px));z-index:4;width:3rem;height:3rem;border-radius:50%;border:0;padding:0;display:grid;place-items:center;background:var(--kuning);color:var(--dalam);box-shadow:0 4px 12px rgba(0,0,0,.35);cursor:pointer;-webkit-tap-highlight-color:transparent;opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .2s,transform .2s,visibility 0s .2s}
+.atas.tampil{opacity:1;visibility:visible;transform:none;transition:opacity .2s,transform .2s}
+.atas svg{width:1.5rem;height:1.5rem;fill:none;stroke:currentColor;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.atas:active{transform:scale(.92)}
+.atas:focus-visible{outline:3px solid var(--krem);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.atas,.atas.tampil{transition:none}}
